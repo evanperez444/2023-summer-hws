@@ -1,0 +1,150 @@
+# Problem Alphabet Slices
+* Store the first ten letters of the alphabet in a list.
+* Use a slice to print out the first three letters of the alphabet.
+* Use a slice to print out any three letters from the middle of your list.
+
+# Solve Alphabet slices here. 
+alphabet = ['A','B','C','D','E','F','G','H','I','J',]
+print(alphabet[:3])
+print(alphabet[7:10])
+
+
+# Problem:  Covert all the rapper names to title case and save them into a new different list. 
+example: lil wayne becomes Lil Wayne
+
+# Solve rapper names here
+rappers = ['lil wayne', 'nicki minaj', 'drake']
+new_list = []
+for r in rappers:
+    new_list.append(r.title())
+print(new_list)
+
+
+# Problem: Write a function thats input is a number and output is:
+* Return True if the input number is even.
+* Return False if the input number is odd.
+
+# Solve problem here
+
+def check_evenodd(num):
+    if num % 2 == 0:
+        return True
+    else:
+        return False
+num1 = 8
+num2 = 5
+
+print(check_evenodd(num1))
+print(check_evenodd(num2))
+
+# Problem: Find the sum and the average of this list of numbers.
+
+Try doing this using a loop.  Then try doing this without using a loop. 
+
+# Solve problem here:
+
+my_list = [1, 5, 10, 55, 88, 44, 42, 50, 20, 38]
+
+#sum with loop
+list_sum = 0
+for n in my_list:
+        list_sum += n
+        
+        
+#sum without loop
+list_sum2 = 0
+list_sum2 = sum(my_list)
+        
+    
+#average with loop
+list_avg = list_sum / (len(my_list))
+
+#average without loop
+list_avg2 = list_sum2 / (len(my_list))
+
+
+# Keep this as your last line in this cell.
+print(list_sum, list_avg)
+print(list_sum2, list_avg2)
+
+# Problem: Write a function that input is a number and output returns the following
+* If the input is divisible by three, return 'fizz'
+* If the input is divisible by five, return 'buzz'
+* If the input is divisible by three and by five, return 'fizzbuzz'
+* If the input is not divisible by three or five, return None.
+
+# Solve Problem fizzbuzz here:
+def fizzbuzz(num):
+    if num % 3 == 0 and num % 5 == 0:
+        return 'fizzbuzz'
+    elif num % 3 == 0:
+        return 'fizz'
+    elif num % 5 == 0:
+        return 'buzz'
+    else:
+        return None
+
+print(fizzbuzz(15))
+print(fizzbuzz(6))
+print(fizzbuzz(10))
+
+# Problem: 
+Write a function that takes a list and returns a new list that contains all the elements of the first list minus all the duplicates.
+
+Example input and expected output
+
+input = ["Michele", "Robin", "Sara", "Michele"]
+
+expected output = ['Michele', 'Robin', 'Sara']
+
+
+# Solve problem here:
+
+names = ["Michele", "Robin", "Sara", "Michele"]
+
+def remove_dup(og_list):
+    new_list = set(og_list)
+    #converts the set back to a list
+    return list(new_list)
+print(remove_dup(names))
+
+
+# Problem: 
+Write a function that takes a list of numbers (for example, a = [5, 10, 15, 20, 25]) and returns a new list of only the first and last elements of the given list.
+
+Example input and expected output:
+
+input = [5, 10, 15, 20, 25]
+
+expected output = [5, 25]
+
+# Solve problem here:
+input_list = [5, 10, 99, 20, 25]
+
+def first_last(input_list):
+    new_list = [input_list[0], input_list[len(input_list)-1]]
+    return new_list
+                
+first_last(input_list)
+
+# Problem:  Implement a function that takes as input three variables, and returns the largest of the three. 
+Do this without using the Python max() function! 
+_*Note all three input numbers will always be different, no need to account for a tie._
+
+Example input and expected output:
+
+input = your_function(1, 5, 10)
+
+expected output:  10
+
+# Solve Problem here:
+
+def your_function(a, b, c):
+    # Fill in your code below and return max value of a, b, c
+    return max(a,b,c)
+    
+your_function(1,5,10)
+
+# Test to see if your function works properly.
+your_function(1, 5, 10)
+
